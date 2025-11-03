@@ -9,7 +9,7 @@ echo "📊 Checking system resources..."
 MEM_KB=$(grep MemTotal /proc/meminfo | awk '{print $2}')
 MEM_GB=$((MEM_KB / 1024 / 1024))
 
-if [ $MEM_GB -lt 2 ]; then
+if [ $MEM_GB -lt 0.5 ]; then
     echo "⚠️  Low memory detected (${MEM_GB}GB). Consider Docker method for better performance."
     read -p "Continue with Ghost-CLI? (y/n): " -n 1 -r
     if [[ ! $REPLY =~ ^[Yy]$ ]]; then exit 1; fi
