@@ -26,8 +26,8 @@ sudo ufw allow 'Nginx Full'
 sudo ufw allow 'OpenSSH'
 sudo ufw --force enable
 
-# Install Node.js 18.x (required by Ghost)
-curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+# Install Node.js 20.x (previous version deprecated)
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt install -y nodejs
 
 # Verify installations
